@@ -1,0 +1,532 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/base.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/custom.css">
+</head>
+<body class="bg-white dark:bg-gray-900">
+
+    <!-- Header -->
+    <header class="header--section">
+        <nav id="navbar" class="z-10 w-full border-b border-black/5 dark:border-white/5 lg:border-transparent ">
+            <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+            <div class="relative flex items-center justify-between gap-6 py-3 md:gap-0 md:py-4 ">
+                <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-max ">
+                    <a href="/src/" aria-label="logo" class="flex items-center space-x-2 ">
+                        <span class="text-2xl font-bold text-gray-900 dark:text-white flex items-center justify-center">
+                            <svg class="h-7 w-auto" viewBox="0 0 370 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_4_24)">
+                                    <path class="fill-[#24221B] dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M184.589 48.5615L259.174 177.176C271.689 198.757 264.34 226.397 242.76 238.912C221.862 251.03 195.284 244.523 182.258 224.504L168.033 245.393C189.368 269.831 225.685 276.557 254.799 259.673C287.846 240.509 299.1 198.183 279.936 165.136L204.374 34.8366C201.937 30.6351 199.126 26.7859 196.008 23.3066L184.589 48.5615Z"></path>
+                                    <path class="fill-[#24221B] dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M184.19 92.696L108.622 222.992C96.1058 244.572 68.4656 251.92 46.8855 239.405C25.3055 226.889 17.9575 199.249 30.4733 177.668L106.042 47.3721C118.558 25.792 146.198 18.444 167.778 30.9599C189.358 43.4757 196.706 71.116 184.19 92.696ZM85.2807 35.3313C104.447 2.28524 146.773 -8.96694 179.819 10.1989C212.865 29.3647 224.117 71.6908 204.951 104.737L129.383 235.033C110.217 268.079 67.8908 279.331 34.8447 260.166C1.79866 241 -9.45348 198.674 9.71234 165.628L85.2807 35.3313Z"></path>
+                                    
+                                </g>
+                            </svg>
+                            StaySquare
+                        </span>
+                    </a>
+                </div>
+                <div class="flex w-full justify-end">
+                    <div id="navLayer" aria-hidden="true" class="fixed inset-0 z-10 h-screen w-screen origin-bottom scale-y-0 bg-white/70 backdrop-blur-2xl transition duration-500 dark:bg-gray-900/70 lg:hidden "></div>
+                    <div id="navlinks" class="invisible absolute top-full left-0 z-20 w-full origin-top-right translate-y-1 scale-90 flex-col flex-wrap justify-end gap-6 rounded-3xl border border-gray-100 bg-white p-8 opacity-0 shadow-2xl shadow-gray-600/10 transition-all duration-300 dark:bg-gray-900  dark:border-gray-700  dark:shadow-none lg:visible lg:relative lg:flex lg:w-8/12 lg:translate-y-0 lg:scale-100 lg:flex-row lg:items-center lg:gap-0 lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:shadow-none">
+                        <div class="w-full text-gray-600  dark:text-gray-200 lg:w-auto lg:pr-4 lg:pt-0 ">
+                            <ul class="flex flex-col gap-6 tracking-wide lg:flex-row lg:gap-0 lg:text-sm ">
+                                <li class="">
+                                    <a href="/src" class="hover:text-primary block transition dark:hover:text-white md:px-4 ">
+                                        <span class="">Home</span>
+                                    </a>
+                                </li><li class="">
+                                    <a href="./flatlist/" class="hover:text-primary block transition dark:hover:text-white md:px-4 ">
+                                        <span class="">Flat List</span>
+                                    </a>
+                                </li>
+                                <li class="">
+                                  <a href="https://tailus.gumroad.com/l/astls-premium" target="_blank" class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4 ">
+                                      <span class="">Premium</span>
+                                      <span class="flex rounded-full bg-primary/20 px-1.5 py-0.5 text-xs tracking-wider bg-purple-100 text-purple-700 dark:bg-white/10 dark:text-orange-300 "> new</span>
+                                  </a>
+                              </li>
+                              <li class="">
+                                  <a href="./review/" class="hover:text-primary block transition dark:hover:text-white md:px-4 ">
+                                      <span class="">Reviews</span>
+                                  </a>
+                              </li>
+
+                              <li class="">
+                                  <a href="/#reviews" class="hover:text-primary block transition dark:hover:text-white md:px-4 ">
+                                      <span class="">About Us</span>
+                                  </a>
+                              </li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="mt-6 -ml-1 flex w-full flex-col space-y-2 border-primary/10 dark:border-gray-700 sm:flex-row md:w-max lg:mt-0 lg:mr-6 lg:space-y-0 lg:border-l lg:pl-6">
+                            <a class="relative ml-auto flex h-9 w-full items-center justify-center before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 before:text-[#42a5f5] sm:px-4 lg:before:border before:border-gray-200 before:bg-gray-100 dark:before:bg-gray-800" href="./login">
+                                <span class="relative text-sm font-semibold text-[#42a5f5] dark:text-gray-900 text-primary dark:text-white">Get started</span>
+                            </a>
+                        </div>
+                    </div>
+                    <button aria-label="switch theme" onclick="toggleTheme()" class="switcher group relative h-9 w-9 rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 lg:flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto hidden h-5 w-5 fill-gray-500 duration-300 group-hover:rotate-180 group-hover:fill-yellow-400 dark:block dark:fill-gray-300" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="transistion relative m-auto h-5 w-5 fill-gray-500 duration-300 group-hover:-rotate-90 group-hover:fill-blue-900 dark:hidden" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                    </button>
+                    <div class="relative flex max-h-10 items-center -mr-6 lg:hidden ">
+                        <button aria-label="humburger" id="hamburger" class="relative p-6 group" onclick="toggleMenu(this)">
+                            <div aria-hidden="true" id="line" class="m-auto h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
+                            <div aria-hidden="true" id="line2" class="m-auto mt-2 h-0.5 w-5 rounded bg-sky-900 transition duration-300 dark:bg-gray-300"></div>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+
+    <div class="px-6 md:px-12 xl:px-6 py-20 min-h-screen	flex items-center justify-center relative overflow-hidden	bg-[url('./../img/banner-bg-light.jpg')] dark:bg-[url('./../img/banner-bg.jpg')] bg-cover bg-center">
+      <div class="max-w-7xl mx-auto">
+        <h1 class="mx-auto max-w-4xl font-display text-3xl font-medium tracking-tight text-gray-900 dark:text-white sm:text-4xl text-center">
+            <span class="inline-block"> Welcome To
+                <span class="relative whitespace-nowrap text-[#42a5f5]">
+                <svg aria-hidden="true" viewBox="0 0 418 42" class="absolute top-2/3 left-0 h-[0.58em] w-full fill-orange-300" preserveAspectRatio="none"><path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path></svg>
+                <span class="relative">StaySquare</span></span>
+            </span>
+        </h1>
+        <h1 class="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-gray-900 dark:text-white sm:text-7xl text-center">
+            <span class="inline-block"> 
+                <span class="relative whitespace-nowrap text-[#42a5f5]">
+                <svg aria-hidden="true" viewBox="0 0 418 42" class="absolute top-2/3 left-0 h-[0.58em] w-full fill-orange-300" preserveAspectRatio="none"><path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path></svg>
+                <span class="relative">Home</span></span>
+                Away From Home
+            </span>
+        </h1>
+        <p class="text-gray-600 dark:text-gray-300 text-center mt-6 text-xl">
+          Save Your Valuable TIme
+        </p>
+        <div class="mt-6 flex flex-col justify-center gap-y-5 sm:flex-row sm:gap-y-0 sm:gap-x-6">
+            <div class="w-full bg-slate-300 dark:bg-slate-800 p-4 rounded-full">
+              <form class="w-full flex items-center justify-between flex-wrap">
+                <div class="w-full max-w-[35%]">
+                  <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Select Type</option>
+                    <option value="bachelor">Bachelor</option>
+                    <option value="family">Family</option>
+                    <option value="sublet">Sublet</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="w-full max-w-[35%]">
+                  <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Select Type</option>
+                    <option value=male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+                <div class="w-full max-w-[24%]">
+                  <button type="button" id="find" title="Start buying" class="relative ml-auto p-2.5 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 active:duration-75 active:before:scale-95 before:bg-[#42a5f5] dark:before:bg-[#42a5f5] sm:px-6 w-full">
+                      <span class="relative font-semibold text-white dark:text-white block text-center">Find</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="relative mx-auto h-6 w-6 text-white dark:text-gray-900 md:hidden">
+                          <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z"></path>
+                      </svg>
+                  </button>
+              </div>
+              </form>
+            </div>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- Trending Properties -->
+
+  <div class="property-list py-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white md:text-3xl xl:text-3xl">Trending Properties</h2>
+      </div>
+      <div class="flex flex-wrap gap-4" id="trending-now">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature Properties -->
+
+  <div class="property-list py-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white md:text-3xl xl:text-3xl">Feature Properties</h2>
+      </div>
+      <div class="flex flex-wrap gap-4" id="feature-now">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bachelor Properties -->
+
+  <div class="property-list py-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white md:text-3xl xl:text-3xl">Bachelor Properties</h2>
+      </div>
+      <div class="flex flex-wrap gap-4" id="bachelor">
+
+      </div>
+    </div>
+  </div>
+
+   <!-- Family Properties -->
+
+  <div class="property-list py-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl font-bold text-gray-800 dark:text-white md:text-3xl xl:text-3xl">Family</h2>
+      </div>
+      <div class="flex flex-wrap gap-4" id="family">
+
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Blog Card -->
+
+    <div class="w-full">
+      <div class="max-w-7xl mx-auto">
+        <div class="mt-16 grid gap-8 sm:mx-auto sm:w-2/3 md:w-full md:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-3xl border border-gray-100 bg-white p-8 py-12 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none sm:p-12">
+              <div class="space-y-12 text-center">
+                  <img src="https://cdn-icons-png.flaticon.com/512/584/584796.png" class="mx-auto h-14 w-auto" width="512" height="512" alt="burger illustration">
+                  <div class="space-y-6">
+                      <h3 class="text-2xl font-semibold text-gray-800 transition dark:text-white">First feature</h3>
+                      <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe nesciunt neque culpa hic illum ab qui error repellendus asperiores unde ut ipsam perferendis nemo fuga cum, eum consectetur, magnam doloremque!</p>
+                      <a aria-label="read more" href="#" class="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
+                              <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
+                          </svg>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="rounded-3xl border border-gray-100 bg-white p-8 py-12 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none sm:p-12">
+              <div class="space-y-12 text-center">
+                  <img src="https://cdn-icons-png.flaticon.com/512/6106/6106288.png" class="mx-auto h-14 w-auto" width="512" height="512" alt="burger illustration">
+                  <div class="space-y-6">
+                      <h3 class="text-2xl font-semibold text-gray-800 transition dark:text-white">Second feature</h3>
+                      <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe nesciunt neque culpa hic illum ab qui error repellendus asperiores unde ut ipsam perferendis nemo fuga cum, eum consectetur, magnam doloremque!</p>
+                      <a aria-label="read more" href="#" class="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
+                              <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
+                          </svg>
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="rounded-3xl border border-gray-100 bg-white p-8 py-12 shadow-2xl shadow-gray-600/10 dark:border-gray-700 dark:bg-gray-800 dark:shadow-none sm:p-12">
+              <div class="space-y-12 text-center">
+                  <img src="https://cdn-icons-png.flaticon.com/512/4727/4727266.png" class="mx-auto h-14 w-auto" width="512" height="512" alt="burger illustration">
+                  <div class="space-y-6">
+                      <h3 class="text-2xl font-semibold text-gray-800 transition dark:text-white">Third feature</h3>
+                      <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe nesciunt neque culpa hic illum ab qui error repellendus asperiores unde ut ipsam perferendis nemo fuga cum, eum consectetur, magnam doloremque!</p>
+                      <a aria-label="read more" href="#" class="group relative mx-auto flex h-12 w-12 items-center justify-center before:absolute before:inset-0 before:rounded-full before:border before:border-gray-200 before:bg-gray-50 before:bg-gradient-to-b before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="relative h-5 w-5 text-gray-600 transition duration-300 group-hover:translate-x-1 dark:text-white">
+                              <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
+                          </svg>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div id="features">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+          <div class="mt-16 grid divide-x divide-y divide-gray-100 dark:divide-gray-700 overflow-hidden rounded-3xl border border-gray-100 text-gray-600 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-4 lg:divide-y-0 xl:grid-cols-4">
+            <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+              <div class="relative space-y-8 py-12 p-8">
+                <img src="https://cdn-icons-png.flaticon.com/512/4341/4341139.png" class="w-12" width="512" height="512" alt="burger illustration">
+      
+                <div class="space-y-2">
+                  <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
+                    First feature
+                  </h5>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
+                  </p>
+                </div>
+                <a href="#" class="flex items-center justify-between group-hover:text-secondary">
+                  <span class="text-sm">Read more</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                    <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
+                  </svg>                
+                </a>
+              </div>
+            </div>
+            <div class="group relative bg-gray-50 dark:bg-gray-900 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+              <div class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
+                <img src="https://cdn-icons-png.flaticon.com/512/4341/4341134.png" class="w-12" width="512" height="512" alt="burger illustration">
+      
+                <div class="space-y-2">
+                  <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
+                    Second feature
+                  </h5>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
+                  </p>
+                </div>
+                <a href="#" class="flex items-center justify-between group-hover:text-secondary">
+                  <span class="text-sm">Read more</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                    <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
+                  </svg>                
+                </a>
+              </div>
+            </div>
+            <div class="group relative bg-white dark:bg-gray-800 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+              <div class="relative space-y-8 py-12 p-8">
+                <img src="https://cdn-icons-png.flaticon.com/512/4341/4341160.png" class="w-12" width="512" height="512" alt="burger illustration">
+      
+                <div class="space-y-2">
+                  <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
+                    Third feature
+                  </h5>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
+                  </p>
+                </div>
+                <a href="#" class="flex items-center justify-between group-hover:text-secondary">
+                  <span class="text-sm">Read more</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                    <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
+                  </svg>                
+                </a>
+              </div>
+            </div>
+            <div class="group relative bg-gray-50 dark:bg-gray-900 transition hover:z-[1] hover:shadow-2xl hover:shadow-gray-600/10">
+              <div class="relative space-y-8 py-12 p-8 transition duration-300 group-hover:bg-white dark:group-hover:bg-gray-800">
+                <img src="https://cdn-icons-png.flaticon.com/512/4341/4341025.png" class="w-12" width="512" height="512" alt="burger illustration">
+      
+                <div class="space-y-2">
+                  <h5 class="text-xl font-semibold text-gray-700 dark:text-white transition group-hover:text-secondary">
+                    More features
+                  </h5>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    Neque Dolor, fugiat non cum doloribus aperiam voluptates nostrum.
+                  </p>
+                </div>
+                <a href="#" class="flex items-center justify-between group-hover:text-secondary">
+                  <span class="text-sm">Read more</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 -translate-x-4 text-2xl opacity-0 transition duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                    <path fill-rule="evenodd" d="M12.97 3.97a.75.75 0 011.06 0l7.5 7.5a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 11-1.06-1.06l6.22-6.22H3a.75.75 0 010-1.5h16.19l-6.22-6.22a.75.75 0 010-1.06z" clip-rule="evenodd"></path>
+                  </svg>                
+                </a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Our Support -->
+    <div class="relative">
+      <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
+        <div class="relative pt-16 ml-auto">
+            <div class="text-center mb-6">
+              <h2 class="text-2xl font-bold text-gray-800 dark:text-white md:text-3xl xl:text-4xl">Trusted by leaders</h2>
+            </div>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
+                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                    <img src="./img/microsoft.svg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="">
+                    </div>
+                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                    <img src="./img/airbnb.svg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="">
+                </div>
+                <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
+                    <img src="./img/google.svg" class="h-9 w-auto m-auto" loading="lazy" alt="client logo" width="" height="">
+                </div>
+                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                    <img src="./img/ge.svg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="">
+                    </div>
+                    <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
+                    <img src="./img/netflix.svg" class="h-8 w-auto m-auto" loading="lazy" alt="client logo" width="" height="">
+                    </div>
+                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                    <img src="./img/google-cloud.svg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo" width="" height="">
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter Section -->
+    <section class="mt-16 relative before:absolute before:inset-0 before:h-px before:w-96 before:bg-gradient-to-r before:from-yellow-300 before:via-pink-400 before:to-transparent after:absolute after:inset-0 after:ml-auto after:mt-auto after:h-px after:w-96 after:bg-gradient-to-l after:from-yellow-300 after:via-pink-400 after:to-transparent dark:bg-gray-900">
+      <div class="border-y border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-gray-900">
+          <div class="relative mx-auto px-6 md:max-w-full md:px-12 lg:max-w-6xl xl:px-0">
+              <div class="items-end justify-center md:flex">
+                  <div class="h-max py-16 w-full max-w-3xl">
+                      <div class="text-center md:text-left">
+                          <h2 class="text-center text-3xl font-bold text-gray-800 dark:text-white md:text-4xl xl:text-5xl">
+                              One step to improve <br>
+                              your workflow
+                          </h2>
+                          <p class="text-center mb-8 mt-6 text-gray-600 dark:text-gray-300">Praesentium, atque exercitationem dolorum, iste libero eaque animi illum magnam velit iusto quidem omnis quas! Ad expedita quaerat.</p>
+                          <form action="" class="mt-12">
+                              <div class="relative flex items-center rounded-full border border-primary/20 bg-white p-1 px-2 shadow-md dark:border-white/10 dark:bg-gray-900 md:p-2 lg:pr-3">
+                                  <div class="py-3 pl-4 lg:pl-5">
+                                      <svg xmlns="http://www.w3.org/2000/svg" class="m-auto h-6 w-6 fill-gray-500 dark:fill-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                                      </svg>
+                                  </div>
+                                  <input autocomplete="email" aria-label="your email" placeholder="Your mail address" class="w-full rounded-full bg-transparent p-4 placeholder-gray-600 dark:placeholder-white focus-visible:outline-none dark:text-white" type="email">
+                                  <div class="md:pr-1.5 lg:pr-0">
+                                      <button type="button" title="Start buying" class="relative ml-auto h-12 w-16 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 active:duration-75 active:before:scale-95 dark:before:bg-[#42a5f5] sm:w-auto sm:px-6">
+                                          <span class="relative hidden w-max font-semibold text-white dark:text-white md:block">Subscribe Now </span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="relative mx-auto h-6 w-6 text-white dark:text-gray-900 md:hidden">
+                                              <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z"></path>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100 pt-32 pb-8 dark:border-gray-800">
+      <div>
+          <div class="m-auto space-y-8 px-4 text-gray-600 dark:text-gray-400 sm:px-12 xl:max-w-6xl xl:px-0">
+              <div class="grid grid-cols-8 gap-6 md:gap-0">
+                  <div class="col-span-8 md:col-span-2 lg:col-span-3">
+                      <div class="flex h-full items-center justify-between gap-6 border-b border-white py-6 dark:border-gray-800 md:flex-col md:items-start md:justify-between md:space-y-6 md:border-none md:py-0">
+                          <div>
+                              <a href="/" aria-label="logo" class="flex items-center space-x-2 ">
+                                <span class="text-2xl font-bold text-gray-900 dark:text-white flex items-center justify-center">
+                                    <svg class="h-7 w-auto" viewBox="0 0 370 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_4_24)">
+                                            <path class="fill-[#24221B] dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M184.589 48.5615L259.174 177.176C271.689 198.757 264.34 226.397 242.76 238.912C221.862 251.03 195.284 244.523 182.258 224.504L168.033 245.393C189.368 269.831 225.685 276.557 254.799 259.673C287.846 240.509 299.1 198.183 279.936 165.136L204.374 34.8366C201.937 30.6351 199.126 26.7859 196.008 23.3066L184.589 48.5615Z"></path>
+                                            <path class="fill-[#24221B] dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M184.19 92.696L108.622 222.992C96.1058 244.572 68.4656 251.92 46.8855 239.405C25.3055 226.889 17.9575 199.249 30.4733 177.668L106.042 47.3721C118.558 25.792 146.198 18.444 167.778 30.9599C189.358 43.4757 196.706 71.116 184.19 92.696ZM85.2807 35.3313C104.447 2.28524 146.773 -8.96694 179.819 10.1989C212.865 29.3647 224.117 71.6908 204.951 104.737L129.383 235.033C110.217 268.079 67.8908 279.331 34.8447 260.166C1.79866 241 -9.45348 198.674 9.71234 165.628L85.2807 35.3313Z"></path>
+                                            
+                                        </g>
+                                    </svg>
+                                    StaySquare
+                                </span>
+                            </a>
+                            <p class="mx-auto mt-6 text-gray-700 dark:text-gray-300">A growing team doesn't need to mean growing pains. Privacy, and the right tool for every step of your journey - Jira Software friction - company size.</p>
+                          </div>
+
+                          <div class="flex gap-6">
+                              <a href="#" target="blank" aria-label="github" class="hover:text-primary dark:hover:text-primaryLight">
+                                  <span class="sr-only">Github</span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                                  </svg>
+                              </a>
+                              <a href="#" target="blank" aria-label="twitter" class="hover:text-primary dark:hover:text-primaryLight">
+                                  <span class="sr-only">Twitter</span>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
+                                  </svg>
+                              </a>
+                              <a href="#" target="blank" aria-label="medium" class="hover:text-primary dark:hover:text-primaryLight">
+                                  <span class="sr-only">Medium</span>
+
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-medium" viewBox="0 0 16 16">
+                                      <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8zm4.95 0c0 2.34-1.01 4.236-2.256 4.236-1.246 0-2.256-1.897-2.256-4.236 0-2.34 1.01-4.236 2.256-4.236 1.246 0 2.256 1.897 2.256 4.236zM16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795z"></path>
+                                  </svg>
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-span-8 md:col-span-6 lg:col-span-5">
+                      <div class="grid grid-cols-2 gap-6 pb-16 sm:grid-cols-3 md:pl-16">
+                          <div>
+                              <h2 class="text-base font-medium text-gray-800 dark:text-gray-200">Company</h2>
+                              <ul class="mt-4 list-inside space-y-4">
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">About</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Customers</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Enterprise</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Partners</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Jobs</a>
+                                  </li>
+                              </ul>
+                          </div>
+                          <div>
+                              <h2 class="text-base font-medium text-gray-800 dark:text-gray-200">Products</h2>
+                              <ul class="mt-4 list-inside space-y-4">
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">About</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Customers</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Enterprise</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Partners</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Jobs</a>
+                                  </li>
+                              </ul>
+                          </div>
+                          <div>
+                              <h2 class="text-base font-medium text-gray-800 dark:text-gray-200">Ressources</h2>
+                              <ul class="mt-4 list-inside space-y-4">
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">About</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Customers</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Enterprise</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Partners</a>
+                                  </li>
+                                  <li>
+                                      <a href="#" class="text-sm duration-100 hover:text-primary dark:hover:text-white">Jobs</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                      <div class="flex justify-between text-sm md:pl-16">
+                          <span>©StaySquare 2024 - Present</span>
+                          <span>All right reserved</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
